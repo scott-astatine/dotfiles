@@ -1,0 +1,3 @@
+#!/bin/bash
+setxkbmap -option ctrl:nocaps
+xinput set-prop 15 'libinput Accel Speed' 0.9

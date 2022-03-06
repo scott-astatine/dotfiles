@@ -16,9 +16,9 @@
     alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
     active-foreground:           rgba ( 101, 172, 255, 100 % );
     lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
+    selected-active-foreground:  rgba ( 150, 150, 150, 100 % );
     alternate-active-background: rgba ( 75, 81, 96, 89 % );
-    background:                  rgba ( 20, 20, 19, 95 % );
+    background:                  #2f2f2f;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
@@ -31,19 +31,19 @@
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 30, 31, 31, 17 % );
+    active-background:          #3f3f3f;
     selected-active-background:  rgba ( 68, 145, 237, 100 % );
+    text-color:                  #eeeeeeee;
 }
 window {
-    background-color: @background;
     border:           0;
-    padding:          4;
     border-radius:    8;
 }
 mainbox {
     border:  0;
     padding: 6;
-    border-radius: 8;
+    background-color: @background;
+    border-radius:    8;
 }
 message {
     border:       2px 0px 0px ;
@@ -66,8 +66,8 @@ element {
     padding: 1px ;
 }
 element-text {
-    background-color: inherit;
-    text-color:       inherit;
+    background-color: #2a2c2c;
+    text-color:       @text-color;
 }
 element.normal.normal {
     background-color: @normal-background;
@@ -109,8 +109,9 @@ scrollbar {
     width:        1px ;
     border:       0;
     handle-color: @normal-foreground;
-    handle-width: 8px ;
+    handle-width: 6px ;
     padding:      0;
+    border-radius: 10;
 }
 mode-switcher {
     border:       2px 0px 0px ;
@@ -128,6 +129,7 @@ inputbar {
     spacing:    0;
     text-color: @normal-foreground;
     padding:    1px ;
+    background-color: rgba(30,30,30,20%);
 }
 case-indicator {
     spacing:    0;
@@ -136,6 +138,7 @@ case-indicator {
 entry {
     spacing:    0;
     text-color: @normal-foreground;
+    background-color: rgba(30,30,30,20%);
 }
 prompt {
     spacing:    0;
@@ -147,7 +150,7 @@ inputbar {
 }
 textbox-prompt-colon {
     expand:     false;
-    str:        "";
+    str:        " ";
     margin:     4px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }

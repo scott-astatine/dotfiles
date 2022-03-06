@@ -18,9 +18,9 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #232323
+background = #33333366
 transparent = true
-background-alt = #444
+background-alt = #3f3f3f
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #eee
@@ -30,12 +30,9 @@ alert = #bd2c40
 
 [bar/main]
 width = 100%
-height = 26
-; offset-x = 50%
-; offset-y = 20%
+height = 28
 radius = 8.0
 fixed-center = false
-
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -52,8 +49,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Salsa:pixelsize=10:antialias=true;2
-font-1 = FontAwesome:size=11:antialias=true;3
+font-0 = Yesteryear:size=12:antialias=true;2
+font-1 = FontAwesome:size=12:antialias=true;3
 font-2 = Isoevka:size=14:antialias=true;2
 font-3 = Material Icons:pixelsize=6;1
 ; font-4 = Noto Color Emoji:size=2:antialias=true;1
@@ -63,53 +60,19 @@ modules-center = mpd
 modules-right = pulseaudio memory wlan eth battery temperature date powermenu
 
 tray-position = center
-tray-detached = true
+tray-detached = false
 tray-padding = 1
-;tray-background = #0063ff
-
-; wm-restack = i3
-
-; override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = 
+tray-background = ${colors.background}
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:40:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label = %title:0:45:...%
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 
 mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
 
 [module/i3]
 type = internal/i3
@@ -252,7 +215,7 @@ type = internal/date
 interval = 1
 
 date = " %b %d,%a"
-date-alt = " %b %d,%a"
+date-alt = " %b %d, %a"
 
 time = %H:%M
 time-alt = %H:%M:%S
@@ -339,9 +302,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -352,7 +315,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.alert}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |

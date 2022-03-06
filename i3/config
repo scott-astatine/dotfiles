@@ -1,32 +1,22 @@
 set $mod Mod4
 
-font pango:Vampiro One 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Eagle Lake 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# set $bgImg ['geolanes.png', 'archlinux.stw', 'landscape.jpg', 'rchwave.png', 'reflected.jpg', 'awesome.png', 'archwaveinv.png', 'wave.png', 'lone.jpg', 'arclbard.jpg']
-
-exec_always --no-startup-id picom -f
-exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/wild.png
-exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id ~/.config/i3/init
+set $lockCmd /bin/loginctl lock-session
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
+exec_always --no-startup-id picom --experimental-backends -b
+# exec_always --no-startup-id ~/.config/polybar/launch
+exec_always --no-startup-id /bin/latte-dock
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- $lockCmd --nofork
+bindsym Mod1+l exec --no-startup-id $lockCmd
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -39,18 +29,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+x kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+c exec --no-startup-id rofi -show calc -no-show-match -no-sort
+bindsym $mod+g exec --no-startup-id rofi -show filebrowser
 
 # change focus
 bindsym $mod+j focus left
@@ -105,9 +91,9 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:  Terms"
-set $ws2 "2:  Web"
-set $ws3 "3"
-set $ws4 "4"
+set $ws2 "2: 🌐 Web"
+set $ws3 "3: 💻 Code"
+set $ws4 "4: 💬 Chat"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -143,8 +129,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -185,48 +173,36 @@ client.urgent           $ubgcolor     $ubgcolor   $textcolor  $ubgcolor
 
 client.background       #ffffff
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         i3bar_command i3bar --transparency
-#         status_command i3status -c ~/.config/i3status/13status.conf
-#         mode invisible
-#         position top
-#         output primary
-#         tray_output primary
-#         font pango:DejaVu Sans 8
-#         separator_symbol |
-#         colors {
-#             background #20202f44
-#             statusline $textcolor
-#             separator #666666
-
-#             focused_workspace  $actcolor $bgcolor $textcolor
-#             active_workspace   $actcolor $bgcolor $textcolor
-#             inactive_workspace $inactcolor $ibgcolor #888888
-#             urgent_workspace   #2f343a $ubgcolor $textcolor
-#             binding_mode       #2f343a $ubgcolor $textcolor
-#         }
-# }
+workspace_auto_back_and_forth yes
 
 for_window [class=".*"] border pixel 0
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 for_window [class="plasmashell"] floating enable
+for_window [class="latte*"] floating enable
+for_window [title="Latte Dock"] floating enable
 for_window [class="Plasma"] floating enable, border none
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none
+for_window [class="systemsettings"] floating enable
 for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="Plasmoidviewer"] floating enable, border none
 for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
-for_window [class="notification"] floating enable, border none, move right 700px, move down 450px
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 400px, move down -50px
+for_window [class="notification"] floating enable, border none, move right 400px, move down -90px
+
 no_focus [class="plasmashell" window_type="notification"] 
 
-bindsym $mod+Mod1+l exec --no-startup-id i3lock -i '/usr/share/backgrounds/archlinux/archwave.png'
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_role="About"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [instance="__scratchpad"] floating enable
 
-gaps inner 7
+gaps inner 6
 
 # vim:ft=sh

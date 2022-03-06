@@ -1,0 +1,82 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  display-run: "Exec:";
+  display-emoji: "Emoji:";
+  display-calc: "Calc:";
+  display-filebrowser: "File:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrains Mono Medium 10";
+  show-icons: true;
+  modi: "window,run,drun,emoji,filebrowser,ssh,calc";
+}
+
+* {
+  bg: #11121D33;
+  bg-alt: #444b6a00;
+
+  fg: #FFFFFF;
+  fg-alt: #787c99;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 40%;
+  height: 60%;
+}
+
+element {
+  padding: 8 0;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8;
+  background-color: none;
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+/* vim: ft=sass

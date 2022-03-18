@@ -55,7 +55,7 @@ font-2 = Isoevka:size=14:antialias=true;2
 font-3 = Material Icons:pixelsize=6;1
 ; font-4 = Noto Color Emoji:size=2:antialias=true;1
 
-modules-left = i3 xwindow
+modules-left = xworkspaces xwindow
 modules-center = mpd
 modules-right = pulseaudio memory wlan eth battery temperature date powermenu
 
@@ -74,51 +74,24 @@ interval = 25
 
 mount-0 = /
 
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
+[module/xworkspaces]
+type = internal/xworkspaces
 
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
-enable-click = false
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-active = %name%
+label-active-background = ${colors.background-alt}
+label-active-underline= ${colors.primary}
+label-active-padding = 1
 
-; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-occupied = %name%
+label-occupied-padding = 1
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;♛
-ws-icon-2 = 3;♜
-ws-icon-3 = 4;♝
-ws-icon-4 = 5;♞
-ws-icon-default = ♟
-
-label-mode = %mode%
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-; Separator in between workspaces
-; label-separator = |
+label-empty = %name%
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 1
 
 
 [module/mpd]

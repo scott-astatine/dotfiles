@@ -1,7 +1,0 @@
-#!/bin/bash
-setxkbmap -option ctrl:nocaps
-xinput set-prop 15 'libinput Accel Speed' 0.9
-mv ~/.bgimg ~/.oldbgimg
-feh --bg-fill ~/.oldbgimg
-wget https://source.unsplash.com/random/nature -O ~/.bgimg
-feh --bg-fill ~/.bgimg

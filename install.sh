@@ -5,7 +5,7 @@ readonly MIN_HYPRLAND_LUA_VERSION="0.55.0"
 readonly DOTFILES_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 
 PACKAGES=(
-    hyprland quickshell hyprlock hyprpicker hyprshot hyprsunset hyprpolkitagent
+    hyprland quickshell hyprpicker hyprshot hyprsunset hyprpolkitagent
     xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland
     kitty dolphin rofi fish tmux btop easyeffects blueman network-manager-applet
     pipewire pipewire-pulse wireplumber

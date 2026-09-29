@@ -53,7 +53,9 @@ AbstractWidget {
     }
 
     property bool wallpaperIsVideo: Config.options.background.wallpaperPath.endsWith(".mp4") || Config.options.background.wallpaperPath.endsWith(".webm") || Config.options.background.wallpaperPath.endsWith(".mkv") || Config.options.background.wallpaperPath.endsWith(".avi") || Config.options.background.wallpaperPath.endsWith(".mov")
-    property string wallpaperPath: wallpaperIsVideo ? Config.options.background.thumbnailPath : Config.options.background.wallpaperPath
+    property string wallpaperPath: wallpaperIsVideo
+        ? (Config.options.background.thumbnailPath || Directories.defaultWallpaperPath)
+        : (Config.options.background.wallpaperPath || Directories.defaultWallpaperPath)
     
     onWallpaperPathChanged: refreshPlacementIfNeeded()
     onPlacementStrategyChanged: refreshPlacementIfNeeded()
@@ -102,4 +104,3 @@ AbstractWidget {
         }
     }
 }
-

@@ -73,7 +73,7 @@ ContentPage {
                     id: wallpaperPreview
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
-                    source: Config.options.background.wallpaperPath ? `${Config.options.background.wallpaperPath}?v=${Wallpapers.reloadToken}` : ""
+                    source: `${Config.options.background.wallpaperPath || Directories.defaultWallpaperPath}?v=${Wallpapers.reloadToken}`
                     cache: false
                     layer.enabled: true
                     layer.effect: OpacityMask {

@@ -52,12 +52,12 @@
     }
   },
   "apps": {
-    "bluetooth": "kcmshell6 kcm_bluetooth",
+    "bluetooth": "blueman-manager",
     "changePassword": "kitty -1 --hold=yes fish -i -c 'passwd'",
     "manageUser": "kcmshell6 kcm_users",
-    "network": "kcmshell6 kcm_networkmanagement",
-    "networkEthernet": "kcmshell6 kcm_networkmanagement",
-    "taskManager": "kitty fish -c 'tmux  attach-session -t 기타:터미널'",
+    "network": "nm-connection-editor",
+    "networkEthernet": "nm-connection-editor",
+    "taskManager": "kitty --hold btop",
     "terminal": "kitty -1",
     "update": "kitty -1 --hold=yes fish -i -c 'pkexec pacman -Syu'",
     "volumeMixer": "~/.config/hypr/hyprland/scripts/launch_first_available.sh \"pavucontrol-qt\" \"pavucontrol\""
@@ -79,8 +79,8 @@
       "widgetsFactor": 1.2,
       "workspaceZoom": 1.07
     },
-    "thumbnailPath": "/home/scott/.cache/current_wallpaper.jpg",
-    "wallpaperPath": "/home/scott/.cache/current_wallpaper.jpg",
+    "thumbnailPath": "",
+    "wallpaperPath": "",
     "widgets": {
       "clock": {
         "cookie": {
@@ -361,7 +361,7 @@
     "updateInterval": 3000
   },
   "screenRecord": {
-    "savePath": "/home/scott/Videos"
+    "savePath": ""
   },
   "screenSnip": {
     "savePath": ""

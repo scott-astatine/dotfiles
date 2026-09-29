@@ -5,7 +5,7 @@ local mainMod = "ALT"
 local terminal = "/bin/kitty ~/.tmux-manage"
 local fileManager = "dolphin"
 local menu = "quickshell ipc --any-display call search toggle"
-local hyprbrightctl = "/home/scott/.config/hypr/hyprbrightctl.sh"
+local hyprbrightctl = os.getenv("HOME") .. "/.config/hypr/hyprbrightctl.sh"
 
 -- Core Binds
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))

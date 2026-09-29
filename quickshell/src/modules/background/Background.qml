@@ -43,7 +43,9 @@ Variants {
         property int totalWorkspaces: Math.ceil(lastWorkspaceId / workspaceChunkSize) * workspaceChunkSize
         // Wallpaper
         property bool wallpaperIsVideo: Config.options.background.wallpaperPath.endsWith(".mp4") || Config.options.background.wallpaperPath.endsWith(".webm") || Config.options.background.wallpaperPath.endsWith(".mkv") || Config.options.background.wallpaperPath.endsWith(".avi") || Config.options.background.wallpaperPath.endsWith(".mov")
-        property string wallpaperPath: wallpaperIsVideo ? Config.options.background.thumbnailPath : Config.options.background.wallpaperPath
+        property string wallpaperPath: wallpaperIsVideo
+            ? (Config.options.background.thumbnailPath || Directories.defaultWallpaperPath)
+            : (Config.options.background.wallpaperPath || Directories.defaultWallpaperPath)
         property bool wallpaperSafetyTriggered: {
             const enabled = Config.options.workSafety.enable.wallpaper;
             const sensitiveWallpaper = (CF.StringUtils.stringListContainsSubstring(wallpaperPath.toLowerCase(), Config.options.workSafety.triggerCondition.fileKeywords));
@@ -134,7 +136,7 @@ Variants {
         property string activeWallpaperSource: bgRoot.wallpaperSafetyTriggered ? "" : (bgRoot.wallpaperPath ? (bgRoot.wallpaperPath.startsWith("file://") ? `${bgRoot.wallpaperPath}?v=${bgRoot.reloadToken}` : `file://${bgRoot.wallpaperPath}?v=${bgRoot.reloadToken}`) : "")
 
         onActiveWallpaperSourceChanged: {
-            prevWallpaper.source = `file:///home/scott/.cache/prev_wallpaper.jpg?v=${bgRoot.reloadToken}`;
+            prevWallpaper.source = `${Directories.cache}prev_wallpaper.jpg?v=${bgRoot.reloadToken}`;
             prevWallpaper.opacity = 1.0;
             wallpaper.scale = 1.06;
             wallpaper.opacity = 0;
@@ -152,7 +154,7 @@ Variants {
                 cache: false
                 smooth: true
                 fillMode: Image.PreserveAspectCrop
-                source: `file:///home/scott/.cache/prev_wallpaper.jpg?v=${bgRoot.reloadToken}`
+                source: `${Directories.cache}prev_wallpaper.jpg?v=${bgRoot.reloadToken}`
                 x: wallpaper.x
                 y: wallpaper.y
                 width: wallpaper.width

@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# -----------------------------------------------------------------------------
+#  SCOTT'S 4K DARK WALLPAPER HUNTER (QUICKSHELL NATIVE EDITION)
+# -----------------------------------------------------------------------------
+
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+fi
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    WAYLAND_SOCKET=$(ls "$XDG_RUNTIME_DIR"/wayland-[0-9] 2>/dev/null | head -n 1)
+    if [ -n "$WAYLAND_SOCKET" ]; then
+        export WAYLAND_DISPLAY=$(basename "$WAYLAND_SOCKET")
+    else
+        export WAYLAND_DISPLAY="wayland-1"
+    fi
+fi
+
+CACHE_DIR="$HOME/.cache"
+BACKUP_DIR="$HOME/.cache/wallpaper_backups"
+CURRENT_WALL="$CACHE_DIR/current_wallpaper.jpg"
+TEMP_WALL="$CACHE_DIR/temp_wallpaper.jpg"
+
+mkdir -p "$BACKUP_DIR"
+
+# 1. Network check & wallpaper download
+if ping -c 1 -W 1 8.8.8.8 >/dev/null 2>&1; then
+    echo ":: Network online. Scouring the web for 4K darkness..."
+
+    if python3 "$SCRIPT_DIR/fetch_wallpaper.py" "$TEMP_WALL"; then
+        if file "$TEMP_WALL" | grep -qE 'image|bitmap'; then
+            if [ -f "$CURRENT_WALL" ]; then
+                cp "$CURRENT_WALL" "$CACHE_DIR/prev_wallpaper.jpg" 2>/dev/null || true
+                TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+                cp "$CURRENT_WALL" "$BACKUP_DIR/anime_dark_4k_${TIMESTAMP}.jpg"
+                rm -f "$CURRENT_WALL"
+            fi
+            mv "$TEMP_WALL" "$CURRENT_WALL"
+            NEW_WALL="$CURRENT_WALL"
+            echo ":: Wallpaper updated successfully."
+        else
+            echo ":: Download corrupt. Aborting update."
+            rm -f "$TEMP_WALL"
+            USE_BACKUP=true
+        fi
+    else
+        echo ":: Failed to fetch dynamic wallpaper. Falling back to backup."
+        USE_BACKUP=true
+    fi
+else
+    echo ":: No network. Going dark (offline mode)."
+    USE_BACKUP=true
+fi
+
+# 2. Offline fallback
+if [ "$USE_BACKUP" = true ]; then
+    if [ "$(ls -A "$BACKUP_DIR")" ]; then
+        echo ":: Rolling the dice on backup directory..."
+        RANDOM_WALL=$(find "$BACKUP_DIR" -type f | shuf -n 1)
+        # Copy the current wallpaper to prev for crossfade transition
+        if [ -f "$CURRENT_WALL" ]; then
+            cp "$CURRENT_WALL" "$CACHE_DIR/prev_wallpaper.jpg" 2>/dev/null || true
+        fi
+        # Copy the backup to the canonical current_wallpaper path
+        cp "$RANDOM_WALL" "$CURRENT_WALL"
+        NEW_WALL="$CURRENT_WALL"
+    else
+        echo ":: No backups found."
+        exit 1
+    fi
+fi
+
+echo ":: Applying Quickshell wallpaper: $NEW_WALL"
+
+# Kill legacy swaybg processes
+killall swaybg 2>/dev/null || true
+systemctl --user stop swaybg-wallpaper 2>/dev/null || true
+
+# 3. Extract Material You colors
+if [ -f "$SCRIPT_DIR/extract_colors.py" ]; then
+    python3 "$SCRIPT_DIR/extract_colors.py" "$NEW_WALL"
+fi
+
+# 4. Notify QuickShell via IPC — this is the single source of truth
+# All Background.qml instances and the lock screen react to this signal
+echo ":: Notifying QuickShell..."
+quickshell ipc call wallpapers update 2>/dev/null || true
+
+hyprctl reload 2>/dev/null || true
+tmux source-file ~/.tmux.conf 2>/dev/null || true
+
+echo ":: Done. Native Quickshell wallpaper active."

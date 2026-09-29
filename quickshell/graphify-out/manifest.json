@@ -1,0 +1,1562 @@
+{
+  "config.json": {
+    "mtime": 1789189761.3817375,
+    "ast_hash": "df30c603283115053e1608a86ad3123b",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/geometry/offset.js": {
+    "mtime": 1788930316.9437847,
+    "ast_hash": "040ec1b78aee9ae9a42a8e8187bf6ed7",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/graphics/matrix.js": {
+    "mtime": 1788930316.9438422,
+    "ast_hash": "7d3c2a1d4893a5d8bef6fa048d61fb4e",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/material-shapes.js": {
+    "mtime": 1788930316.9438422,
+    "ast_hash": "daabf259ccaee6f05fd595df25486d25",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/corner-rounding.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "35405f91cb4f408ca7b69b0ee1c6575e",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/cubic.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "7b9726bc89fcd8b3abc210f2789ec87b",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/feature-mapping.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "8ff03d1a14c360ddfe9f8b829cb9b3d4",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/feature.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "f81e3aa4a55a457454d2ccc63ee961f5",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/float-mapping.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "879ba6e91cee5054bd11981bc6e737a5",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/morph.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "0e0574f6efeb89708ec921c108fdcf35",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/point.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "7679aab4183a20cf2d6207fe632b2c3e",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/polygon-measure.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "b97a57d881b21a6b14eb0ac9f25b4a6e",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/rounded-corner.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "16c4f55917192e3dff754c587b3e302c",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/rounded-polygon.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "ce3634991a4f4d4ae65843ee5583e802",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/shapes/utils.js": {
+    "mtime": 1788930316.943943,
+    "ast_hash": "5b602f59661f0e5bac0bb293e6a24c65",
+    "semantic_hash": ""
+  },
+  "src/core/functions/fuzzysort.js": {
+    "mtime": 1788930316.9340932,
+    "ast_hash": "f5d2498fb188eeea3de6f905b84f1257",
+    "semantic_hash": ""
+  },
+  "src/core/functions/levendist.js": {
+    "mtime": 1788930316.9340932,
+    "ast_hash": "03dd20b323d2c2f06e2ec5a2939a2012",
+    "semantic_hash": ""
+  },
+  "src/modules/cheatsheet/periodic_table.js": {
+    "mtime": 1788873029.6152313,
+    "ast_hash": "2ac7def99745ba38c77c34b39485e846",
+    "semantic_hash": ""
+  },
+  "src/modules/drawers/right/calendar/calendar_layout.js": {
+    "mtime": 1788873029.6006305,
+    "ast_hash": "061f4ca294d32146e13661d712e2494f",
+    "semantic_hash": ""
+  },
+  "src/modules/onScreenKeyboard/layouts.js": {
+    "mtime": 1788873029.6242309,
+    "ast_hash": "40a1da49220a4724099f9169fb77b47a",
+    "semantic_hash": ""
+  },
+  "src/scripts/ai/gemini-categorize-wallpaper.sh": {
+    "mtime": 1789188510.4368265,
+    "ast_hash": "fc12559f471acb505b0c88e96acf2a10",
+    "semantic_hash": ""
+  },
+  "src/scripts/ai/gemini-translate.sh": {
+    "mtime": 1788930300.7308323,
+    "ast_hash": "919a4c0f64cf4172d95d53a61aa9adef",
+    "semantic_hash": ""
+  },
+  "src/scripts/ai/show-installed-ollama-models.sh": {
+    "mtime": 1788930300.7308323,
+    "ast_hash": "cb37d44dfc90512b585f2b3d16fbe267",
+    "semantic_hash": ""
+  },
+  "src/scripts/hyprland/hyprconfigurator.py": {
+    "mtime": 1789188510.3698282,
+    "ast_hash": "2b4a74dcfd5cfcb8e633aed96074cefa",
+    "semantic_hash": ""
+  },
+  "src/scripts/keyring/is_unlocked.sh": {
+    "mtime": 1788930300.7313883,
+    "ast_hash": "a62561763ace4e57cbf2c1baa52dd84f",
+    "semantic_hash": ""
+  },
+  "src/scripts/keyring/try_lookup.sh": {
+    "mtime": 1788930300.7313883,
+    "ast_hash": "4b0a9874651e0da55a833c2c90ca6332",
+    "semantic_hash": ""
+  },
+  "src/scripts/keyring/unlock.sh": {
+    "mtime": 1788930300.7313883,
+    "ast_hash": "754513f24397acf5f801b2ba1e23e210",
+    "semantic_hash": ""
+  },
+  "src/scripts/musicRecognition/recognize-music.sh": {
+    "mtime": 1788930300.7316766,
+    "ast_hash": "506102de0fe6fd0fca9b7aef5f5e6d37",
+    "semantic_hash": ""
+  },
+  "src/scripts/thumbnails/generate-thumbnails-magick.sh": {
+    "mtime": 1788872802.467452,
+    "ast_hash": "08a4530d94ccf9449ba8ae196a479294",
+    "semantic_hash": ""
+  },
+  "src/scripts/thumbnails/thumbgen-venv.sh": {
+    "mtime": 1788872802.467452,
+    "ast_hash": "24a85c6f3eabf27c353cc955f9983f23",
+    "semantic_hash": ""
+  },
+  "src/scripts/thumbnails/thumbgen.py": {
+    "mtime": 1788872802.467452,
+    "ast_hash": "f21175578a3d740c4d3177f900be5904",
+    "semantic_hash": ""
+  },
+  "src/scripts/videos/record.sh": {
+    "mtime": 1788930300.7317982,
+    "ast_hash": "4cb7feaed501673f138cea5cf6a1d8e1",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/find-regions-venv.sh": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "2d48f8577776e979c0b25edb251904bf",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/find_regions.py": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "5f5fac57b5a4ca9d8d4cea71294bf0ad",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/least-busy-region-venv.sh": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "289c02e37a4c8202fced3c9ee28fe8f5",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/least_busy_region.py": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "5447607cf966ffd4706d119b5b213260",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/text-color-venv.sh": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "b64a7beceecf8ff157ae72bbda22310b",
+    "semantic_hash": ""
+  },
+  "src/scripts/vision/text_color.py": {
+    "mtime": 1788872802.4624524,
+    "ast_hash": "3f4faecd9c1209ca6486e962ad7489ca",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/apply_colors.sh": {
+    "mtime": 1788930156.981162,
+    "ast_hash": "ee6c1ee27b2ec3bd878409539ccaf9bd",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/code/material-code-set-color.sh": {
+    "mtime": 1788872802.4578962,
+    "ast_hash": "0771155ae56150230468e14ea88016d5",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/color_scheme.py": {
+    "mtime": 1788872802.4504533,
+    "ast_hash": "0c74e60643395d7cb62923c3a623f768",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/engine.sh": {
+    "mtime": 1788930142.2619586,
+    "ast_hash": "626d86b92f3af21fab0fdd68bf97f294",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/extract_colors.py": {
+    "mtime": 1789027020.0107682,
+    "ast_hash": "d34f871c65996bd75d8b5d2b9a39a08b",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/extract_palette.py": {
+    "mtime": 1788872802.4474533,
+    "ast_hash": "87b6d26031cc1d2016d0c87c529f00e3",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/fetch_wallpaper.py": {
+    "mtime": 1789027020.0107682,
+    "ast_hash": "e5709f11fb7f0826a433c4d15cb489f5",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/setwallpaper.sh": {
+    "mtime": 1789030656.7224448,
+    "ast_hash": "a8f67ca27ffdf3fcada19d386f54ef29",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/shufflewallpaper": {
+    "mtime": 1789060405.7929943,
+    "ast_hash": "e839454ed3b2819967fe105f944286cb",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/terminal/scheme-base.json": {
+    "mtime": 1788872802.460686,
+    "ast_hash": "bfbaeda0fca1fc550e63cedaa12b9d74",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/README.md": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "00cfec6cd628af64c60546309c62984b",
+    "semantic_hash": ""
+  },
+  "defaults/ai/prompts/nova-Default.md": {
+    "mtime": 1788940792.4921367,
+    "ast_hash": "abbefdddfc72336b63935d9fdcc001f8",
+    "semantic_hash": ""
+  },
+  "defaults/ai/prompts/w-FourPointedSparkle.md": {
+    "mtime": 1788109545.176007,
+    "ast_hash": "9cef0cc6d3fac7650e9e576dc1aaee7e",
+    "semantic_hash": ""
+  },
+  "defaults/ai/prompts/w-OpenMechanicalFlower.md": {
+    "mtime": 1788109545.1762552,
+    "ast_hash": "187531fdd42c5b8bb6a6594b35a8908b",
+    "semantic_hash": ""
+  },
+  "src/components/shapes/README.md": {
+    "mtime": 1788930316.9435556,
+    "ast_hash": "8fe6c4e468546237de5cf65f39f45765",
+    "semantic_hash": ""
+  },
+  "src/scripts/media/raw_output_config.txt": {
+    "mtime": 1788872802.4654522,
+    "ast_hash": "33e29d323cf2363694c7594eca296b48",
+    "semantic_hash": ""
+  },
+  "src/scripts/wallpaper/terminal/sequences.txt": {
+    "mtime": 1788872802.460686,
+    "ast_hash": "cc4c15b4be41e65af7381c139c736b0a",
+    "semantic_hash": ""
+  },
+  "assets/icons/ai-openai-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "c81af4438b00ce708b2db3198a919a73",
+    "semantic_hash": ""
+  },
+  "assets/icons/arch-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "5ba245a0516de7c3b3adf7e10b2b6686",
+    "semantic_hash": ""
+  },
+  "assets/icons/cachyos-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "3dc091eb862220507f00d4bc615c97aa",
+    "semantic_hash": ""
+  },
+  "assets/icons/cloudflare-dns-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "bde8a6e239a6ecf01cdc59ac32246595",
+    "semantic_hash": ""
+  },
+  "assets/icons/crosshair-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "ecddb493de582fc373faf8093ada247d",
+    "semantic_hash": ""
+  },
+  "assets/icons/debian-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "84b7ba6ad8e33611bebc5b0b3bf65f59",
+    "semantic_hash": ""
+  },
+  "assets/icons/deepseek-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "ae255b95a4fceb07977dd84252f1df3a",
+    "semantic_hash": ""
+  },
+  "assets/icons/desktop-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "981a02838324ee6705678ff3d62508dc",
+    "semantic_hash": ""
+  },
+  "assets/icons/endeavouros-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "3f278edb2010039bf607a172732b6553",
+    "semantic_hash": ""
+  },
+  "assets/icons/fedora-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "e9af1c135871208cd5e3ca71dceeba9e",
+    "semantic_hash": ""
+  },
+  "assets/icons/flatpak-symbolic.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "bba5b6615d416bfba7af536cafd71f26",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/add-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "021b311ee9b4aa6427b03db9c9554883",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/add.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "f3516ab7fbd09b99217fc737213598dd",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "d12bd71880073da1d54bd693b2f932e9",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert-off-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "407e8af497b8d90cf01411dcf04e7b4a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert-off.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "bd2c699d1642e3adc2be37175b7813cd",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert-snooze-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "fc6cff8c51717dc42d398952aad4081f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert-snooze.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "e5e3877df4f90e003302746345957097",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/alert.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "fd75f416829cb74194116d43570a7c59",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/app-generic-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "67c41e7889588775d7307da33d4ec864",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/app-generic.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "9201ce551b4c7a859e4d655da5e03349",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/apps-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "8a0730a7f1ea23adb4bcd7b66d10c104",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/apps.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "84a4805bcb2aefc1fb85dd14646d4a29",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-clockwise-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "105e277ebda4fc8672c54d2c29e6c172",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-clockwise.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "b0b80cbdfa71670c66855b9f9a5c3dc9",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-counterclockwise-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "4413f2b5b17e9f7ca0dbd7e301098582",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-counterclockwise.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "45d98712f0183b003b86d0998c096058",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-enter-left-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "dd66281bb926f317793d79e1129c3dd7",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-enter-left.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "48092c584b0ec2b9de29a156ba4a68be",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-left-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "cdda175cca090de1f6ab52b37dee5cb5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-left.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "28f7e5bdfea95b2f10f993e664dfb50c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-right-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "88eeb1430a1432c86f09dca242d8527b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-right.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "093c807a7d2193d47f5e391f3d77f678",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-sync.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "8c173f3fcdca1d0ce38785244befb9bf",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-up-left-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "cc2d824a2d0203c87e5765657a4eac2d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/arrow-up-left.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "db2559262ad5f87a7f28ff661d2297ef",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/auto-filled.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "f4feb4164692cf877a8b03dca8f4b2df",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/auto.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "c54a14878f0382d6881ee09a71fdc7a3",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-0.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "996a790ac6c27e7f45bc0138ccfd79c4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-1.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "cca152b74979f306de257984ef14b1ed",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-2.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "0d5ae3bb76a797cd3ad4caaea8913f48",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-3.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "89aefbbd93cb17b6323a6b829dc7e9b0",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-4.svg": {
+    "mtime": 1788065810.6081645,
+    "ast_hash": "761b41da7f10a0143370bcf9bc4df653",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-5.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "167a63286dde56ecbb58f5ef919cb99e",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-6.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "94c6d01da75cb70f2bb92e75bfba33d4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-7.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "7acebfebc0580d416ced709e7c3e7f90",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-8.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "5f1c6bdea054a399f6bc2446dac1383a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-9.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "daa28d73d86a3866ae5710aeeed2695b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-charge.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "7586c820871d13178673d714c8f3c459",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-full.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "028b6e842ea4c171ce58379f17906533",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-saver.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "95ce7be7c990fc617190fd2df1c6677b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/battery-warning.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "9322e89417cf2edd5681eda3a589a560",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-connected-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "ca5347b3f37fca0e0ede2280b2ba9c86",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-connected.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "078adcd772f566479294a5d1de85c6a2",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-disabled-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "4a11c7049bc72a0fd847de8f159fba4f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-disabled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "5222c111d8afa25a7109e185ffaff2d8",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "9492ff00b340275aa16de99014df6f0e",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth-searching.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "3dfa77d7afeb48bf807d6e043e486529",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/bluetooth.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "76b4b7cc7892bbf9908a38df129ea80c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/calculator-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "2d0d1da0a147892eb1f86b16c3c21d22",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/calculator.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "277d5c60cb2e77e9a5ed7d711c9b1198",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/calendar-add-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "185b51857bba9b96cc4888cd8d693c30",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/calendar-add.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "bd1694085dc416fb31816e4064b459ad",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/camera-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "c76ceedccdf0ac597ae6134d34912af4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/camera.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "8ce7ef7b629e68a747673e8ae10ec328",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/caret-down-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "f8c6960a855ef31cdfee89c9866a65d4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/caret-down.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "9b8de85f0322e072b9573b6dcfd3f5af",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/caret-up-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "9af966ee0d930248257a304f1c391ea4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/caret-up.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "704f31f8500396f46b23cf43b549036c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/checkmark-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "bd56124b34f87921b7aad7bc55860657",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/checkmark.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "8fd3aefb8a7903348ca800cf8679cc04",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-down-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "4e4de28a46b614b7f922da7aa87ac810",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-down.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "592cdd18969e858bd48444e26acb1451",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-left-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "b463123a31461b3ccca2909ed74c66c5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-left.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "d84875ffb11ee4973ccd690f40ab569a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-right-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "310f430728d407ae7b49dffbc6254cdf",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-right.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "abae4d7529142bd4dabf88a575cc1633",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-up-filled.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "f36d2010e51476cb220f6dd1df581f3a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/chevron-up.svg": {
+    "mtime": 1788065810.608647,
+    "ast_hash": "9b31781831ee590b20a1622a9d3f223b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/cloudflare-filled.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "bde8a6e239a6ecf01cdc59ac32246595",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/cloudflare.svg": {
+    "mtime": 1788065810.6078203,
+    "ast_hash": "bde8a6e239a6ecf01cdc59ac32246595",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/corporation.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "4b283108bebf49b365864be6e2c60cb4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/crop-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "e9d6b92555d80b8d61b370104397b208",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/crop.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "c7f862b6e1347d711728279167601e2c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/cut-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "3e4718ced4c895039b4df183f51f8eba",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/cut.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "41953c156e84bd0abf306b4cd940490b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/dark-theme-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "03d4d02b2652062da881ef2044384327",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/dark-theme.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "7f87b5c3d67b747d4271d49cada088c1",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/desktop-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "2f69572e6aabbee2fafa00b138e72e8a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/desktop-speaker-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "7cb7c5c67ea4c6c978e9da851fe6f485",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/desktop-speaker.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "3c3117f9a767b39d3f59476f0bd8bf51",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/desktop.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "96a89e59872a0af7588ef8944da201f2",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/device-eq-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "a3bc8e9b4c1b87ac71df15333880bbc3",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/device-eq.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "d782777e22b20aff3a61c1e55c160197",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/dismiss.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "63571ca7007f4b569a2e057a967fd885",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/drink-coffee-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "dabe06db49c6e08f5fa5ed67413fc039",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/drink-coffee.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "bb355b5e0f2c5b197db7ed942a726282",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/empty.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "844b9564324750ef8cbb5e9d09dcd0ff",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/ethernet-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "cabfcb4bde131cdaef674cac2c3a1c0f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/ethernet.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "acdbda2da785106dfc4cc5e8e35ccf39",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eye-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "9f8aff2e48266bf41771fa6347ac6f78",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eye-off-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "ffd3e0636c592377a137d8c35aadc734",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eye-off.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "65fd52ed814e4d6bf042db0352af696a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eye.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "4d1cc5530959e41638e08543c34b14bc",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eyedropper-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "07a311a2e723ef02c3a39c8588d10d4f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/eyedropper.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "b879113151746a9782719bb14f5aaa0b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/fire-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "fe4ad0425fd57ccb41f1addc116848bd",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/fire.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "d6ff66603fe59aed69e643ea5395c457",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/flash-off-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "37ead6e722ee627e116c84f848f45a95",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/flash-off.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "e57e060f1493675f4aa399daaf5fe252",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/flash-on-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "79a35906252845ebece8ee074b3ce6f0",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/flash-on.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "cbc3789230c6f71c67556e7bf7c762ea",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/games-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "8332b8b9beab269684d11337a4373a34",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/games.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "fdf8d8003009f046b8d4d6e22fa8952c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/globe-search-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "d7e3c172896f582cb588de925a1b45ea",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/globe-search.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "715b3a5430437683aa9001903cd2d24a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/globe-shield-filled.svg": {
+    "mtime": 1788065810.6096473,
+    "ast_hash": "972de471b092218c75042f16744e90f5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/globe-shield.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "cff1df9515b398371478ae66f2e5a6ae",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/headphones-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "02be288f0da3b014369c112c20f1cb96",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/headphones.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "0aa9b9e537ce684b31cb6750e3a1a71c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image-copy-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "647e1be473609b494977a524145aa021",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image-copy.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "2499555e2a622c4355fa1616931d93a6",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image-edit-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "83bcf1447ca9de84c7b030f25defba7c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image-edit.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "035b9004b694717a033c9a73be8df707",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "c3df13d3861741bb0efcb344896b72e3",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/image.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "65e890cb44204291f79cc40ce55a15e5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/keyboard-dock-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "dfe54e3687fbd5098763aa6cc322a5d6",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/keyboard-dock.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "2c3504c29bb659a1d6a3724322fa4783",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/keyboard-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "9e98a1cb6096049918fcc8dc1ff4498d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/keyboard.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "9b5109a052682b7fe9bfdd3a430eb771",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/leaf-two-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "c1f56a2c79fb87bc82036ff2bdb27e71",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/leaf-two.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "2d55d70a2bb7894274d8aa7add0b8ffe",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/library-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "8270259869eeaf850e01847894fea8d0",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/library.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "f53c3edc48c79b06bca6705ff06d17c8",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/lock-closed-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "f18fdf22e8e95a42f0f03560e3e85ad6",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/lock-closed.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "1f8e6a02c49eb3b2086cfbe6d80eb739",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/lock-open-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "60bef369fcfb8d21f44e9881178a7300",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/lock-open.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "ee3d9a8faa1f3464870b3f8a0ffbd5af",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/mic-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "48cbf6fb753170260d609b034a15a7e4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/mic-off-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "fc30270ac48e6adf7da31555d848489f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/mic-off.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "8c8d9f8671e0d91b246fc86f48975031",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/mic-on.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "10c774f002337e2e86e6c8ff279b2ce2",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/mic.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "9a40b082804e1c5b96f79c991f77c24f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/more-horizontal-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "014427c999a36f2f129bfb7c55d1c5ce",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/more-horizontal.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "6897d4098748d42d8d939b849df628d4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/music-note-2-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "3b971dbcec3299a18d0da05740b89697",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/music-note-2.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "3e504c97d15a7631eda378c8d1b8fd9f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/news-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "696202aa1d88bf5026df194447eb73f7",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/news.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "640f8147bd92121bb1691c036cb77e71",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/next-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "397ffabcdb836a636a77485d24ddbc32",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/next.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "d5176f83268d9b1a766e65df514e7da8",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/open-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "d38abeab2a0b07dbc458bbcdbe4ba274",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/open.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "971537cad548a86b6aa601ab075b39f7",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/options-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "052db660effbd7077656ec51f471f2e3",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/options.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "6caca586dbedf786a210d0b766dc9739",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/pause-filled.svg": {
+    "mtime": 1788065810.6106472,
+    "ast_hash": "deee8212c9db0364bbe788e4904bde3d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/pause.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "470947327a63ee7069b91d587b714963",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "9a21f20613896c2290121a619227db15",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people-settings-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "08c3f8d73785bd19997b1c4e2403c24a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people-settings.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "63f00ccbcf6881627b137cf3b050a513",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people-team-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "22217f114118176128e6de21072c962c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people-team.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "f3778cffa06c6da72a6b79978d59808f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/people.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "93d759f568be26c82277d046327481b7",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/phone-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "ebda40ba3d4231cc4056d5abba288c07",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/phone.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "586d0bc1dbdbfbca392c254e99ac6f65",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/pin-off.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "392ad062312cd5ba314619052d7e21d8",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/pin.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "f87f525830d86ed44d5f17539f914043",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/play-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "4d686d1541073ebf047baa44c57fc011",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/play.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "062135fe32a5d72e587c64001e727eeb",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/power-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "57545a96a4865f4da251aff271518f16",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/power.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "028c63fd06659451f208333905197a8a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/previous-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "f6d08fe89c6d35d7b4170699a0469b9d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/previous.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "2b1df9b07bf33aaaac84c0e5f627fbc4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/record-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "342a6abff75e1729fea755e8641832a5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/record.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "2c07b3772fc2e90558b4f6ca0be1cf3c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/scan-text-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "3b9d008543a88c57de4a272820fa64f4",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/scan-text.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "c186a250438532842a27dc1c80a95ee0",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/search-visual-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "1472ed1d852fc97b9ed633b315ce2f0b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/search-visual.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "0c62753fcc787f31db4e13e375571b49",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/server-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "88ecbce61687ddd60ab3529ed082135a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/server.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "b5e7a8bafbc0052537e429954775f37a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/settings-cog-multiple-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "ad723ec9eff7e7fb92aa2da66936de70",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/settings-cog-multiple.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "465346428cb47cb0f6e010989eaa84ef",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/settings.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "64b1f4dbf40d12eaefa171f47409e7c1",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/shield-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "8c08b9430ba8593a2bdd7a8b67db4521",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/shield-lock-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "5df456bf2326f28afb711c69c1abaa4c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/shield-lock.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "982764192a3dbf5c7f9768ba1e274b81",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/shield.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "12841d0d7682e2609d9859ca8e678354",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-0.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "1d5393fb02cfef6fca3d3146df5faf95",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-1.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "da5cd672dcda9efd03b81a005d946397",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-2-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "08c3e70cc107d889bb760502a2db36bf",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-mute-filled.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "c7d16741a292d67101a3fbe600d88223",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-mute.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "e0a3fa808ba8eab5081c60aabfa2dfda",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-none.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "7fde6f8801588c42cf8aff917b7bbbe1",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-off.svg": {
+    "mtime": 1788065810.6116471,
+    "ast_hash": "6a3de5c083aa4c22584a773371984081",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker-settings.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "2067e5cbd2ff98a2506611bfd51063a5",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/speaker.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "e7abee4a6d68461dfe5d24bbc7499411",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/start-here-pressed.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "254754b113adb76b998e8e6de3f5f494",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/start-here.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "3347b72daddd13bd4ef3fe8e6b674474",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/stop-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "8f0a8967946bca5f4ab3d31cf0d8ed03",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/stop.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "c0881888c3b013c3e3367b400f0dfe57",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/store-microsoft-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "3b4905f6b21ec8dd29c8a09db145bd67",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/store-microsoft.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "b6f30b116954cd65f9ea48dc2d5ffc8d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/subtract-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "02497bf952ad36e790fcc913370b0789",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/subtract.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "fbe1a03c044db88118a8b5d34fcf6e8c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/system-search-checked-dark.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "aec7f54257316843e35f3810c01ec740",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/system-search-checked-light.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "a9fa24bd5dc129957714ffde45612f8f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/system-search-dark.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "8248e8417a291b84e071cff048c84c5d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/system-search-light.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "4b651c2744133fbeb027e5ea92ae6fee",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/task-view-dark.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "aba1d8b16250eab554d6cbf10e86dd26",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/task-view-light.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "5502edbcda0be8f2c340be6e0bd94bd9",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/task-view-pressed-dark.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "0dd9b634fb108aae20c24598d3297b9b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/task-view-pressed-light.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "7c6113d8ebed29c3870617c0bbf0e9ec",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/temperature-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "10655c44e9a7845f72533e29173f970f",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/temperature.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "2c8ed32f98067ead76b6aec0ff321e3a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/video-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "e54d60b34fc4a2f0d39284367b03b983",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/video.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "ca0310107c9cca83e7ea36dde11597ff",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wand-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "6fd278df49c1b784f8ed2b4802b9ae6e",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wand.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "54372eec64449fd9c58cf84d1d6ef93a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-moon-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "45a18b34b8032337aed8608036cb0f47",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-moon-off-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "f7518cd69f3d000b7651457611054659",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-moon-off.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "f3bd4f08c800efcda7a2bd50f6e1469d",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-moon.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "890f45f9b45757369b3b0b6f9507354c",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-sunny-filled.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "e1095b0d7ca36ab98edec397b2124d0b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/weather-sunny.svg": {
+    "mtime": 1788065810.6126473,
+    "ast_hash": "8d57c612b79fbfcbe12dbfa7995be39a",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/widgets.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "aa118fa6f431bdb3e8c75497df937ddc",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-1-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "ffd64368b2e7a8bc49b4bebc55767fe2",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-1.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "2b6f9622cd1a60a3eb694f0ea807052b",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-2-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "5779414b631fec1fe4e7521e63550a08",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-2.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "19b6663e6cd890c4f63f6c79e53c7e67",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-3-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "6db5951a755e976703b848f61bf81f10",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-3.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "614e930a395b421f96b8b00473da3535",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-4-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "54df3efc45f256b04e3a3cc710508521",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-4.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "48d598c7482de809c9b103361b9d7262",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-lock-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "b025ca25104417e2175265b866b8e090",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-lock.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "dbc25daca285fc96ccca01f61d23ddf1",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-off-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "b7d164b98308a7786bc954ad9e2ed304",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-off.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "53fcddd84215943183443c0debabbfaf",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-warning-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "7f537ac9c81c659d1732862239ab71c7",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/wifi-warning.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "7548dd339c0c2cf40d34baf51fa57cc9",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/window-shield-filled.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "6e801f65f8aef7c6dd4a479d75c0d848",
+    "semantic_hash": ""
+  },
+  "assets/icons/fluent/window-shield.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "130a5f11e3f78e3707e9915b796ff240",
+    "semantic_hash": ""
+  },
+  "assets/icons/gentoo-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "93a8481e74cab2c2d41801503a5a318a",
+    "semantic_hash": ""
+  },
+  "assets/icons/github-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "1f73f75a722f3b94cbea543bb608d371",
+    "semantic_hash": ""
+  },
+  "assets/icons/google-gemini-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "d0effd56902dae5c8635054ace76e865",
+    "semantic_hash": ""
+  },
+  "assets/icons/linux-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "9445e6cb8768c6ebb64d2387bc08308c",
+    "semantic_hash": ""
+  },
+  "assets/icons/manjaro-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "8773586f36f61055a7b483e1a3fc4b39",
+    "semantic_hash": ""
+  },
+  "assets/icons/microsoft-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "6f2d1ec0004dc9372548873b78ab6a61",
+    "semantic_hash": ""
+  },
+  "assets/icons/mistral-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "6cd748b026b906a890cb0d6a03dcedaa",
+    "semantic_hash": ""
+  },
+  "assets/icons/nixos-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "1b67d2f26ac707d33f845204dc9c5521",
+    "semantic_hash": ""
+  },
+  "assets/icons/nyarch-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "3a088e4a1017b77751e0595ff3b4ab38",
+    "semantic_hash": ""
+  },
+  "assets/icons/ollama-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "3ba78cca03060dccaf4e3a97bbf194c1",
+    "semantic_hash": ""
+  },
+  "assets/icons/openai-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "c81af4438b00ce708b2db3198a919a73",
+    "semantic_hash": ""
+  },
+  "assets/icons/openrouter-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "093b43e394f7378d3698a12fc6b85f83",
+    "semantic_hash": ""
+  },
+  "assets/icons/spark-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "d0effd56902dae5c8635054ace76e865",
+    "semantic_hash": ""
+  },
+  "assets/icons/ubuntu-symbolic.svg": {
+    "mtime": 1788065810.6136472,
+    "ast_hash": "c7abc15c056338fb1ed3c38798bb91ca",
+    "semantic_hash": ""
+  },
+  "assets/images/default_wallpaper.png": {
+    "mtime": 1788065810.61495,
+    "ast_hash": "1a907d099b15de069efcc9f7588f2294",
+    "semantic_hash": ""
+  }
+}

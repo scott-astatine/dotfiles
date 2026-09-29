@@ -1,0 +1,33 @@
+import "../../../../../core"
+import "../../../../../components"
+import "../../../../../services"
+import "../../../../../core"
+import "../../../../../services"
+import QtQuick
+import Quickshell.Io
+import Quickshell
+import Quickshell.Hyprland
+
+QuickToggleButton {
+    id: root
+    visible: EasyEffects.available
+    toggled: EasyEffects.active
+    buttonIcon: "instant_mix"
+
+    Component.onCompleted: {
+        EasyEffects.fetchActiveState()
+    }
+
+    onClicked: {
+        EasyEffects.toggle()
+    }
+
+    altAction: () => {
+        Quickshell.execDetached(["bash", "-c", "flatpak run com.github.wwmm.easyeffects || easyeffects"])
+        GlobalStates.sidebarRightOpen = false
+    }
+
+    StyledToolTip {
+        text: Translation.tr("EasyEffects | Right-click to configure")
+    }
+}

@@ -17,7 +17,7 @@ PACKAGES=(
     brightnessctl ddcutil playerctl pavucontrol
     fcitx5 fcitx5-gtk fcitx5-qt fcitx5-hangul fcitx5-configtool qt6ct
     gnome-keyring libsecret
-    noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-roboto fontconfig libarchive
+    noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-roboto ttf-material-symbols-variable fontconfig libarchive
     python python-click python-gobject python-loguru python-tqdm
     python-opencv python-numpy python-pillow gnome-desktop-4
 )

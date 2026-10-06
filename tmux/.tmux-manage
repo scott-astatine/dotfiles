@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="${TMUX_MANAGE_PROJECT_DIR:-$HOME/Projects/Frankn}"
+host_dir="${TMUX_MANAGE_HOST_DIR:-$project_root/frankn-host}"
+code_dir="${TMUX_MANAGE_CODE_DIR:-$project_root/frankn}"
+work_session="${TMUX_MANAGE_WORK_SESSION:-일}"
+other_session="${TMUX_MANAGE_OTHER_SESSION:-기타}"
+
+if ! tmux has-session -t "$work_session" 2>/dev/null; then
+    new_session_args=(-d -s "$work_session" -n "네오빔")
+    if [[ -d "$project_root" ]]; then
+        new_session_args+=(-c "$project_root")
+    fi
+    tmux new-session "${new_session_args[@]}" nvim
+
+    new_window_args=(-t "$work_session:2" -n "인공지능")
+    if [[ -d "$project_root" ]]; then
+        new_window_args+=(-c "$project_root")
+    fi
+    tmux new-window "${new_window_args[@]}" codex
+
+    server_window_args=(-t "$work_session:3" -n "서버")
+    if [[ -d "$host_dir" ]]; then
+        server_window_args+=(-c "$host_dir")
+    fi
+    tmux new-window "${server_window_args[@]}"
+
+    split_args=(-v -t "$work_session:3")
+    if [[ -d "$code_dir" ]]; then
+        split_args+=(-c "$code_dir")
+    fi
+    tmux split-pane "${split_args[@]}"
+    tmux last-pane -t "$work_session:3"
+
+    split_args=(-h -t "$work_session:3")
+    if [[ -d "$host_dir" ]]; then
+        split_args+=(-c "$host_dir")
+    fi
+    tmux split-pane "${split_args[@]}"
+fi
+
+if ! tmux has-session -t "$other_session" 2>/dev/null; then
+    tmux new-session -d -s "$other_session" -n "시스템" btop
+    tmux new-window -t "$other_session:2" -n "터미널"
+fi
+
+tmux attach-session -t "$work_session"

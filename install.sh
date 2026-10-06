@@ -163,8 +163,15 @@ link_path "$DOTFILES_DIR/quickshell" "$HOME/.config/quickshell"
 link_path "$DOTFILES_DIR/hypr" "$HOME/.config/hypr"
 link_path "$DOTFILES_DIR/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 link_path "$DOTFILES_DIR/fish/config.fish" "$HOME/.config/fish/config.fish"
+link_path "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
+link_path "$DOTFILES_DIR/tmux/.tmux-manage" "$HOME/.tmux-manage"
 link_path "$DOTFILES_DIR/quickshell/src/scripts/wallpaper/setwallpaper.sh" "$HOME/.local/bin/setwall"
 link_path "$DOTFILES_DIR/quickshell/src/scripts/wallpaper/shufflewallpaper" "$HOME/.local/bin/shufflewallpaper"
+# Wallpaper color extraction writes to this file, so keep a user-owned copy instead of symlinking it.
+if [[ ! -e "$HOME/.tmux-colors.conf" ]]; then
+    cp -- "$DOTFILES_DIR/tmux/.tmux-colors.conf" "$HOME/.tmux-colors.conf"
+fi
+
 
 mkdir -p -- "$HOME/.cache"
 if [[ ! -e "$HOME/.cache/current_wallpaper.jpg" ]]; then

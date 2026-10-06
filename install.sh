@@ -2,6 +2,8 @@
 set -euo pipefail
 
 readonly MIN_HYPRLAND_LUA_VERSION="0.55.0"
+readonly GOOGLE_SANS_FLEX_VERSION="v4.007"
+readonly GOOGLE_SANS_FLEX_SHA256="b7375131bffc5eaaebeb65c69529ba10e7f7a9962b913488f6ef35c432ce19c9"
 readonly DOTFILES_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 
 PACKAGES=(
@@ -15,10 +17,12 @@ PACKAGES=(
     brightnessctl ddcutil playerctl pavucontrol
     fcitx5 fcitx5-gtk fcitx5-qt fcitx5-hangul fcitx5-configtool qt6ct
     gnome-keyring libsecret
-    noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-roboto
+    noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd ttf-roboto fontconfig libarchive
     python python-click python-gobject python-loguru python-tqdm
     python-opencv python-numpy python-pillow gnome-desktop-4
 )
+
+AUR_FONT_PACKAGES=(otf-space-grotesk ttf-readex-pro)
 
 die() {
     printf 'Error: %s\n' "$*" >&2
@@ -48,6 +52,17 @@ for package in "${PACKAGES[@]}"; do
     fi
 done
 
+missing_aur_font_packages=()
+for package in "${AUR_FONT_PACKAGES[@]}"; do
+    if ! pacman -Qq "$package" >/dev/null 2>&1; then
+        missing_aur_font_packages+=("$package")
+    fi
+done
+
+if ((${#missing_aur_font_packages[@]})) && ! command -v yay >/dev/null 2>&1 && ! command -v paru >/dev/null 2>&1; then
+    die "Install yay or paru to install the AUR fonts: ${missing_aur_font_packages[*]}"
+fi
+
 if pacman -Qq hyprland >/dev/null 2>&1; then
     installed_hyprland_version="$(pacman -Q hyprland | awk '{print $2}')"
     if (( $(vercmp "$installed_hyprland_version" "$MIN_HYPRLAND_LUA_VERSION") < 0 )); then
@@ -69,9 +84,51 @@ for package in "${PACKAGES[@]}"; do
     pacman -Qq "$package" >/dev/null 2>&1 || die "Package installation did not provide '$package'."
 done
 
+if ((${#missing_aur_font_packages[@]})); then
+    if command -v yay >/dev/null 2>&1; then
+        yay -S --needed "${missing_aur_font_packages[@]}"
+    elif command -v paru >/dev/null 2>&1; then
+        paru -S --needed "${missing_aur_font_packages[@]}"
+    fi
+fi
+
+for package in "${AUR_FONT_PACKAGES[@]}"; do
+    pacman -Qq "$package" >/dev/null 2>&1 || die "AUR font installation did not provide '$package'."
+done
+
 installed_hyprland_version="$(pacman -Q hyprland | awk '{print $2}')"
 (( $(vercmp "$installed_hyprland_version" "$MIN_HYPRLAND_LUA_VERSION") >= 0 )) || \
     die "Hyprland $MIN_HYPRLAND_LUA_VERSION or newer is required; installed $installed_hyprland_version."
+
+install_google_sans_flex() (
+    if [[ "$(fc-match -f '%{family}' 'Google Sans Flex')" == *"Google Sans Flex"* ]]; then
+        printf 'Google Sans Flex is already installed.\n'
+        return
+    fi
+
+    local temp_dir archive_path font_path font_name download_url
+    temp_dir="$(mktemp -d)"
+    trap 'rm -rf -- "$temp_dir"' EXIT
+    font_name='GoogleSansFlex[GRAD,ROND,opsz,slnt,wdth,wght].ttf'
+    archive_path="$temp_dir/GoogleSansFlex-${GOOGLE_SANS_FLEX_VERSION}.zip"
+    font_path="$HOME/.local/share/fonts/$font_name"
+    download_url="https://github.com/googlefonts/googlesans-flex/releases/download/${GOOGLE_SANS_FLEX_VERSION}/GoogleSansFlex-${GOOGLE_SANS_FLEX_VERSION}.zip"
+
+    curl --fail --location --silent --show-error "$download_url" --output "$archive_path"
+    printf '%s  %s\n' "$GOOGLE_SANS_FLEX_SHA256" "$archive_path" | sha256sum --check --status || \
+        die "Google Sans Flex archive checksum verification failed."
+
+    mkdir -p -- "$(dirname -- "$font_path")"
+    bsdtar -xOf "$archive_path" 'GoogleSansFlex*.ttf' > "$temp_dir/$font_name" || \
+        die "Google Sans Flex archive did not contain the expected font file."
+    fc-scan --format '%{family}\n' "$temp_dir/$font_name" | grep -Fq 'Google Sans Flex' || \
+        die "Downloaded file is not a valid Google Sans Flex font."
+    install -m 644 -- "$temp_dir/$font_name" "$font_path"
+    fc-cache --force "$HOME/.local/share/fonts"
+    printf 'Installed Google Sans Flex to %s\n' "$font_path"
+)
+
+install_google_sans_flex
 
 link_path() {
     local source="$1"
